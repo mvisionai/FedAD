@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from IPython.display import HTML
 
-from model_custom import ClientDiscriminator,ClientEncoder,ClientDecoder,weights_init
+from model_custom import ClientDiscriminator,ClientAEGenerator as ClientGenerator,weights_init
 from utils import  *
 
 manualSeed = 999
@@ -53,20 +53,18 @@ plt.imshow(np.transpose(vutils.make_grid(real_batch[0].to(device)[:64], padding=
 
 
 # Create the generator
-netE = ClientEncoder(ngpu).to(device)
-netDe = ClientEncoder(ngpu).to(device)
+netG = ClientGenerator(ngpu).to(device)
 
 # Handle multi-gpu if desired
 if (device.type == 'cuda') and (ngpu > 1):
-    netE = nn.DataParallel(netE, list(range(ngpu)))
-    netDe = nn.DataParallel(netDe, list(range(ngpu)))
+    netG = nn.DataParallel(netG, list(range(ngpu)))
 
 # Apply the weights_init function to randomly initialize all weights
 #  to mean=0, stdev=0.2.
-#netG.apply(weights_init)
+netG.apply(weights_init)
 
 # Print the model
-
+print(netG)
 
 
 # Create the Discriminator
@@ -78,7 +76,7 @@ if (device.type == 'cuda') and (ngpu > 1):
 
 # Apply the weights_init function to randomly initialize all weights
 #  to mean=0, stdev=0.2.
-#netD.apply(weights_init)
+netD.apply(weights_init)
 
 # Print the model
 print(netD)
@@ -97,11 +95,7 @@ fake_label = 0.
 
 # Setup Adam optimizers for both G and D
 optimizerD = optim.Adam(netD.parameters(), lr=lr, betas=(beta1, 0.999))
-optimizerG = optim.Adam(netE.parameters(), lr=lr, betas=(beta1, 0.999))
-optimizerGe = optim.Adam(netDe.parameters(), lr=lr, betas=(beta1, 0.999))
-
-adversarial_loss = torch.nn.BCELoss()
-pixelwise_loss = torch.nn.L1Loss()
+optimizerG = optim.Adam(netG.parameters(), lr=lr, betas=(beta1, 0.999))
 
 
 # Training Loop
