@@ -17,7 +17,7 @@ import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from IPython.display import HTML
 
-from model_custom import ClientDiscriminator,ClientAEGenerator as ClientGenerator,weights_init
+from model_custom import ClientGanDiscriminator as ClientDiscriminator,ClientGenerator as ClientGenerator,weights_init
 from utils import  *
 
 manualSeed = 999
@@ -138,6 +138,7 @@ for epoch in range(num_epochs):
         label.fill_(fake_label)
         # Classify all fake batch with D
         output = netD(fake.detach()).view(-1)
+        print("Shape check",netD(fake.detach()).size())
         # Calculate D's loss on the all-fake batch
         errD_fake = criterion(output, label)
         # Calculate the gradients for this batch

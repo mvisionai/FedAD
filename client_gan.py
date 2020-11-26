@@ -16,6 +16,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import matplotlib.animation as animation
 from IPython.display import HTML
+import  numpy as np
 import itertools
 
 from model_custom import ClientDiscriminator,ClientEncoder,ClientDecoder,weights_init,ClientClassifier,ClientGenerator
@@ -54,8 +55,8 @@ plt.imshow(np.transpose(vutils.make_grid(real_batch[0].to(device)[:64], padding=
 
 
 # Create the generator
-netE = ClientEncoder(ngpu).to(device)
-netDe = ClientDecoder(ngpu).to(device)
+netE = ClientEncoder().to(device)
+netDe = ClientDecoder().to(device)
 
 # Handle multi-gpu if desired
 
@@ -128,19 +129,22 @@ for epoch in range(num_epochs):
         # (1) Update D network: maximize log(D(x)) + log(1 - D(G(z)))
         ###########################
         ## Train with all-real batch
-        netD.zero_grad()
-        netDe.zero_grad()
+
         netE.zero_grad()
+        netDe.zero_grad()
+        netD.zero_grad()
 
         # Format batch
         real_img = data[0].to(device)
         b_size = real_img.size(0)
-        label = torch.full((b_size,), real_label, dtype=torch.float, device=device).to(device)
-        
-        encoder_img = netD(real_img)
 
-        print("My size",encoder_img.size())
+        label = torch.full((b_size,), real_label, dtype=torch.float, device=device).to(device)
+        odd_label = torch.full((b_size,), fake_label, dtype=torch.float, device=device).to(device)
+
+        
+        encoder_img = netE(real_img)
         decoder_img = netDe(encoder_img)
+
 
         # Forward pass generate batch through De
         errRecons = mae_loss(real_img,decoder_img)
@@ -151,24 +155,28 @@ for epoch in range(num_epochs):
         optimizerDe.step()
         optimizerE.step()
 
-        noise = torch.randn(b_size, nz, 1, 1, device=device)
+        noise = torch.randn(tuple(encoder_img.size()), device=device)
+
 
         # Forward pass  through Discriminator
         output_real = netD(noise).view(-1)
         output_fake = netD(encoder_img).view(-1)
         # Calculate loss on all-real batch
-        errD_real = adversarial_loss(output_real, label)
-        label.fill_(fake_label)
-        errD_fake = adversarial_loss(output_fake, label)
+
+        #@print("all s",netD(noise).size(),label.size())
+        errD_real = 0.001 * adversarial_loss(output_real, label)
+
+        errD_fake = 0.001 * adversarial_loss(output_fake.detach(), odd_label)
 
         errD = errD_real + errD_fake
 
         # Calculate gradients for D in backward pass
-        errD.backward()
+        errD.backward(retain_graph=True)
 
         optimizerD.step()
 
-
+        del label
+        del odd_label
         # Output training stats
         if i % 50 == 0:
             print('[%d/%d][%d/%d]\tLoss_D: %.4f\tLoss_G: %.4f\tD(x): %.4f'

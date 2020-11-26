@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/FedAI.iml" filepath="$PROJECT_DIR$/.idea/FedAI.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/FedAD.iml" filepath="$PROJECT_DIR$/.idea/FedAD.iml" />
     </modules>
   </component>
 </project>
