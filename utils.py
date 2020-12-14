@@ -2,7 +2,7 @@
 
 
 
-dataroot = "/media/mvisionai/Projects/archive/img_align_celeba"
+dataroot = "N:\celeba\\archive\img_align_celeba"
 
 # Number of workers for dataloader
 workers = 0
