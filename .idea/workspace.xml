@@ -20,9 +20,13 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a6a2a83a-4fe0-4a1e-aaad-529b2e977e79" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/FedAD.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/FedAD.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/data_grouping.py" beforeDir="false" afterPath="$PROJECT_DIR$/data_grouping.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/utils.py" beforeDir="false" afterPath="$PROJECT_DIR$/utils.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,42 +39,6 @@
     <SUITE FILE_PATH="coverage/FedAI$preprocessing_pipeline.coverage" NAME="preprocessing_pipeline Coverage Results" MODIFIED="1604405912741" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$/Preprocessing" />
     <SUITE FILE_PATH="coverage/FedAD$manager.coverage" NAME="manager Coverage Results" MODIFIED="1606891362812" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="C:/ProgramData/Anaconda3/envs/mvisionai/Lib/site-packages/s3transfer" />
     <SUITE FILE_PATH="coverage/FedAD$unzip_data.coverage" NAME="unzip_data Coverage Results" MODIFIED="1607589631552" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-  </component>
-  <component name="FUSProjectUsageTrigger">
-    <session id="-380903732">
-      <usages-collector id="statistics.file.extensions.edit">
-        <counts>
-          <entry key="py" value="2081" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.edit">
-        <counts>
-          <entry key="Python" value="2081" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.lifecycle.project">
-        <counts>
-          <entry key="project.closed" value="1" />
-          <entry key="project.open.time.115" value="1" />
-          <entry key="project.open.time.55" value="1" />
-          <entry key="project.open.time.56" value="1" />
-          <entry key="project.open.time.63" value="1" />
-          <entry key="project.open.time.71" value="1" />
-          <entry key="project.open.time.77" value="1" />
-          <entry key="project.opened" value="6" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.extensions.open">
-        <counts>
-          <entry key="py" value="16" />
-        </counts>
-      </usages-collector>
-      <usages-collector id="statistics.file.types.open">
-        <counts>
-          <entry key="Python" value="16" />
-        </counts>
-      </usages-collector>
-    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
@@ -259,35 +227,23 @@
   <component name="PropertiesComponent">
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
-    <property name="last_opened_file_path" value="M:/projects/FedJournal" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
-    <property name="settings.editor.selected.configurable" value="http.proxy" />
+    <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="N:\codes\FedAD" />
-      <recent name="$PROJECT_DIR$" />
-    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="N:\codes\FedAD" />
       <recent name="N:\codes\FedAD\Preprocessing" />
       <recent name="$PROJECT_DIR$/Preprocessing" />
       <recent name="N:\codes\FedAI\Preprocessing" />
-      <recent name="N:\codes\FedAI\Preprocessing\reference" />
     </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="N:\codes\FedAD" />
+      <recent name="$PROJECT_DIR$" />
+    </key>
   </component>
   <component name="RunManager" selected="Python.data_grouping">
     <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
@@ -430,7 +386,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="false" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -489,52 +445,21 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="RECENTLY_FILTERED_USER_GROUPS">
-                <collection />
-              </option>
-              <option name="RECENTLY_FILTERED_BRANCH_GROUPS">
-                <collection />
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
     </option>
+    <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
   </component>
-  <component name="WindowStateProjectService">
-    <state x="802" y="300" width="424" height="513" key="FileChooserDialogImpl" timestamp="1606336118548">
-      <screen x="0" y="27" width="2048" height="1060" />
-    </state>
-    <state x="802" y="300" width="424" height="513" key="FileChooserDialogImpl/0.27.2048.1060@0.27.2048.1060" timestamp="1606336118548" />
-    <state width="2002" height="398" key="GridCell.Tab.0.bottom" timestamp="1606241669786">
-      <screen x="0" y="27" width="2048" height="1060" />
-    </state>
-    <state width="2002" height="398" key="GridCell.Tab.0.bottom/0.27.2048.1060@0.27.2048.1060" timestamp="1606241669786" />
-    <state width="2002" height="398" key="GridCell.Tab.0.center" timestamp="1606241669785">
-      <screen x="0" y="27" width="2048" height="1060" />
-    </state>
-    <state width="2002" height="398" key="GridCell.Tab.0.center/0.27.2048.1060@0.27.2048.1060" timestamp="1606241669785" />
-    <state width="2002" height="398" key="GridCell.Tab.0.left" timestamp="1606241669785">
-      <screen x="0" y="27" width="2048" height="1060" />
-    </state>
-    <state width="2002" height="398" key="GridCell.Tab.0.left/0.27.2048.1060@0.27.2048.1060" timestamp="1606241669785" />
-    <state width="2002" height="398" key="GridCell.Tab.0.right" timestamp="1606241669786">
-      <screen x="0" y="27" width="2048" height="1060" />
-    </state>
-    <state width="2002" height="398" key="GridCell.Tab.0.right/0.27.2048.1060@0.27.2048.1060" timestamp="1606241669786" />
-    <state x="513" y="191" key="SettingsEditor" timestamp="1606227558499">
-      <screen x="0" y="27" width="2048" height="1060" />
-    </state>
-    <state x="513" y="191" key="SettingsEditor/0.27.2048.1060@0.27.2048.1060" timestamp="1606227558499" />
-  </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/FedAD$client_gan.coverage" NAME="client_gan Coverage Results" MODIFIED="1606241669776" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/FedAD$utils.coverage" NAME="utils Coverage Results" MODIFIED="1606151116581" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FedAD$client_gan.coverage" NAME="client_gan Coverage Results" MODIFIED="1606933174975" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FedAD$data_grouping.coverage" NAME="data_grouping Coverage Results" MODIFIED="1608110776163" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/FedAD$poc_gan.coverage" NAME="poc_gan Coverage Results" MODIFIED="1606239486334" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/FedAD$utils.coverage" NAME="utils Coverage Results" MODIFIED="1606933171259" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://C:/ProgramData/Anaconda3/envs/mvisionai/Lib/site-packages/torch/nn/modules/conv.py">

@@ -14,7 +14,8 @@
 .idea/**/shelf
 .idea/**
 __pycache__/**
-
+.idea
+.idea/
 
 summaries/
 utils.py
